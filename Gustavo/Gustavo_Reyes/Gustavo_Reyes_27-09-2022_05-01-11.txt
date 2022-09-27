@@ -1,0 +1,5 @@
+Hola Gustavo!
+Tu nombre es: Gustavo
+Tu apellido es: Reyes
+Tu RUT es: 21023531-0
+Tu correo es: gus@gmail.com
