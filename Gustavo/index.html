@@ -10,12 +10,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+    <h4>Ingreso de datos</h4>
     <form action="index.php" method="post">
-        Ingreso de datos: <br>
+        <p>Ingrese su nombre:</p>
         <input type="text" name="nombre" id="nombre"><br>
+        <p>Ingrese su apellido:</p>
         <input type="text" name="apellido" id="apellido"><br>
-
-        <input type="submit" value="enviar" name="enviar">
+        <p>Ingrese su RUT (00000000-0):</p>
+        <input type="text" name="rut" id="rut"><br>
+        <p>Ingrese su correo:</p>
+        <input type="email" name="correo" id="correo"><br>
+        <br>
+        <input type="submit" value="Enviar mis datos!" name="enviar">
     </form>
   </body>
 </html>
