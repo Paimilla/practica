@@ -18,9 +18,28 @@
         echo "<p>El directorio existe </p>";
     else 
         mkdir("$nombreCarpeta");
+        $nombreArchivo = "$nombreCarpeta/$nombreCarpeta".".html";
+        $control = fopen($nombreArchivo, "w+") or die("no se puede abrir");
+        $escribir = "$Nombre $Apellido $Rut $Correo $Nacimiento";
+        fputs($control, $escribir);
+        fclose($control);
     
-    
+    echo "$Nombre $Apellido $Rut $Correo $Nacimiento";
     ?>
+    <table>
+        <tr>
+            <td>
+                <h1>
+                    Datos de : 
+                    <?PHP echo " $Nombre $Apellido"; ?>
+                </h1>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 
 </body>
 </html>
