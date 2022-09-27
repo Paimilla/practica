@@ -48,29 +48,29 @@
       ?>
 
         <table>
-            <tr>
-                <td>
+            <tr> <!-- Table Row -->
+                <td> <!-- Table Data Cell -->
                     <h1>
                         Datos de:
                         <?php echo "$nombre $apellido"; ?>
                     </h1>
                 </td>
             </tr>
-            <tr>
-              <td width=50%><b>RUT</b></td>
-              <td width=50%><b>Correo</b></td>
+            <tr> <!-- Table Row -->
+              <td width=50%><b>RUT</b></td> <!-- Table Data Cell -->
+              <td width=50%><b>Correo</b></td> <!-- Table Data Cell -->
             </tr>
-            <tr>
-              <td width=50%><?php echo "$rut"; ?> </td>
-              <td width=50%><?php echo "$correo"; ?> </td>
+            <tr> <!-- Table Row -->
+              <td width=50%><?php echo "$rut"; ?> </td> <!-- Table Data Cell -->
+              <td width=50%><?php echo "$correo"; ?> </td> <!-- Table Data Cell -->
             </tr>
-            <tr>
-              <td width=50%><b>Nombre</b></td>
-              <td width=50%><b>Apellido</b></td>
+            <tr> <!-- Table Row -->
+              <td width=50%><b>Nombre</b></td> <!-- Table Data Cell -->
+              <td width=50%><b>Apellido</b></td> <!-- Table Data Cell -->
             </tr>
-            <tr>
-              <td width=50%><?php echo "$nombre"; ?> </td>
-              <td width=50%><?php echo "$apellido"; ?> </td>
+            <tr> <!-- Table Row -->
+              <td width=50%><?php echo "$nombre"; ?> </td> <!-- Table Data Cell -->
+              <td width=50%><?php echo "$apellido"; ?> </td> <!-- Table Data Cell -->
             </tr>
         </table>
   </body>
