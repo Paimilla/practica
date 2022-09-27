@@ -19,12 +19,51 @@
             $nuevoNombre = 
             $nombreCarpeta = $Nombre . $Apellido . $Rut;
             if( file_exists("$nombreCarpeta") == true)
-                echo "<p>El directorio existe </p>";
+                echo "<p>El directorio existe</p>";
             else 
                 mkdir("$nombreCarpeta");
-            $nombreArchivo = "$nombreCarpeta".".html";
+            $nombreArchivo = "$nombreCarpeta/$nombreCarpeta".".html";
             $control = fopen($nombreArchivo, "w+") or die ("No se puede abrir");
-            
+            $escribir = "$Nombre $Apellido $Rut $Correo $Nacimiento";
+            fputs($control,$escribir);
+            fclose($control);
+            echo "$Nombre $Apellido $Rut $Correo $Nacimiento";
         ?>
+
+    <table>
+        <tr>
+            <td>
+                <h1>
+                    Datos de: 
+                    <?PHP 
+                        echo " $Nombre $Apellido"; 
+                    ?>
+                </h1>
+            </td>
+        </tr>
+        <tr>
+            <td width=50%> <b>RUT</b></td>
+            <td width=30%> <b>Fecha de Nacimiento</b></td>
+            <td width=30%> <b>Correo</b></td>
+
+        </tr>
+        <tr>
+            <td width=30%> 
+                <?php
+                    echo "$Rut";
+                ?>
+            </td>
+            <td width=30%>
+                <?php
+                    echo "$Nacimiento";
+                ?>
+            </td>
+            <td width=30%>
+                <?php
+                    echo "$Correo";
+                ?>
+            </td>
+        </tr>
+    </table>
   </body>
 </html>
