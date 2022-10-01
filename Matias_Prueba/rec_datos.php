@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
     <?PHP 
@@ -62,12 +63,22 @@
         $fecha= date('j F Y');
         $hora = date('H:i');
         $telefono = $_POST["telefono"];
-        $ingreso = "IP: ($ip) - $fecha - $hora - $telefono";
-        $ruta = "datos".".txt";
-        $abrir = fopen($ruta, "w+") or die ("El archivo no se puede leer.");
-        fputs($abrir, $ingreso);
-        fclose($abrir);
-        print $ingreso;
+        $ingreso = "IP: ($ip) - $fecha - $hora - $telefono"."\n";
+        $archivoDatos = "datos".".txt";
+        if(file_exists("$archivoDatos") == true)
+        {
+            $abrir = fopen($archivoDatos, "a+") or die ("El archivo no se puede leer.");
+            fputs($abrir, $ingreso);
+            fclose($abrir);
+            print $ingreso;
+        }
+        else 
+        {
+            $abrir = fopen($archivoDatos, "w+") or die ("El archivo no se puede leer.");
+            fputs($abrir, $ingreso);
+            fclose($abrir);
+            print $ingreso;
+        }
     ?>
 
 </body>
